@@ -1,0 +1,21 @@
+.products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+
+.cards{
+     
+}
+
+svg.svg-inline--fa.fa-xmark.fa-xs {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 36px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+

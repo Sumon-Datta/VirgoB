@@ -1,0 +1,244 @@
+[
+    {
+    "id":1,
+    "title":"MEN'S FOOTWEAR",
+    "price":2995 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/UhNW6FODBhO5NRoKwXS00qMdJEzm1dypmIxIG9yz.jpg"
+    
+    },
+    {
+    "id":2,
+    "title":"MEN'S CASUAL PANJABI",
+    "price":2995 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/06/97AP4ug4RngF15FRePzjXvj91oI3Tn2gWrbZTnMe.jpg"
+    
+    },
+    {
+    "id":3,
+    "title":"MEN'S LOFER",
+    "price":2495 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/XjhrkeYOtRhyWUlVzhraEmhMcB6zstIHFnNTfBbM.jpg"
+    
+    },
+    {
+    "id":4,
+    "title":"MEN'S CASUAL SHIRT",
+    "price":1195 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/RbvOePinb5HoW3NmXi7oDR8MH3sNv59JGx1USgkm.jpg"
+    },
+    {
+    "id":5,
+    "title":"MEN'S CASUAL SHIRT",
+    "price":1195 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/F7hizXjpzmQGSQ9qxEUNEjWvvfQcCbNzhVEoXWTD.jpg"
+    },
+    {
+    "id":6,
+    "title":"MEN'S CASUAL SHIRT",
+    "price":995 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/biWUyiiyhbYMqrrZ6F2jKJCoWeEy0ioTlwg9PhAX.jpg"
+    },
+    {
+    "id":7,
+    "title":"MEN'S CASUAL SHIRT",
+    "price":995 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/xFrvjsgvmmC2T2zshrQnySkrq0nztt5qj63ROWyA.jpg"
+    },
+    {
+    "id":8,
+    "title":"MEN'S PREMIUM PANJABI",
+    "price":2195 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/06/T1RDSQmxtE7PRJIoVATBmi8Tl6x4bJDfqaVFZNV4.jpg"
+    },
+    {
+    "id":9,
+    "title":"SKD",
+    "price":3545 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/kSkFt14606.jpg"
+    },
+    {
+    "id":10,
+    "title":"GIRLS KURTI",
+    "price":1145 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/sfEfu12912.jpg"
+    },
+    {
+    "id":11,
+    "title":"GIRLS KURTI",
+    "price":1345 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/sfEfu12912.jpg"
+    },
+    {
+    "id":12,
+    "title":"WOMEN'S KURTI",
+    "price":1845 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/UAgsP14706.jpg"
+    },
+    {
+    "id":13,
+    "title":"MEN'S CASUAL PANJABI",
+    "price":2295 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/z6FeQyBitPoF1ThJeWQ5tqCclSRemQB8VdwSYacG.jpg"
+    },
+    {
+    "id":14,
+    "title":"MEN'S CASUAL PANJABI",
+    "price":1895 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/a6X6ynra9KBpxbzf0Aw8J8FsvXKSq5ixjgJwUPNG.jpg"
+    },
+    {
+    "id":15,
+    "title":"MEN'S CASUAL PANJABI",
+    "price":2395 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/08/bbLyV52WR3U9TnaeeIUTFmdoHKKQgiVro8ZKyt8O.jpg"
+    },
+    {
+    "id":16,
+    "title":"MEN'S CASUAL PANJABI",
+    "price":2095 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/06/a4XO3oLG9lengkcYqoIVgX8q7vqQTwxbWvzPPfxg.jpg"
+    },
+    {
+    "id":17,
+    "title":"MEN'S CASUAL PANJABI",
+    "price":2295 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/06/HBTI65D8vL6F9Res8zmuhV6KZtOfeWLIaVfebjsy.jpg"
+    },
+    {
+    "id":18,
+    "title":"MEN'S CASUAL PANJABI",
+    "price":1795 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/06/FBDxiXkGeRfF87n4BfcSe33llI8UNq91PKZElLtu.jpg"
+    },
+    {
+    "id":19,
+    "title":"MEN'S CASUAL PANJABI",
+    "price":2295 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/08/cTqSZp1igKOgNmL7TPPAWM6JF7y30a31Yhvlh8uw.jpg"
+    },
+    {
+    "id":20,
+    "title":"MEN'S CASUAL PANJABI",
+    "price":1795 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/xCCSqhsT8IwnMs60KllCwhtpDbGO2RexYhDSY4xP.jpg"
+    },
+    {
+    "id":21,
+    "title":"MEN'S CASUAL PANJABI",
+    "price": 1795,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/08/zpahdfKmxwngosCgpOqRWxdaDi6ISgfjJfDVPi19.jpg"
+    },
+    {
+    "id":22,
+    "title":"WOMEN'S KURTI",
+    "price": 1045,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/08/LYMn0semoQXJoZkwsfwoXTmUO41Y0hJQjVZ3IPWP.jpg"
+    },
+    {
+    "id":23,
+    "title":"WOMEN'S KURTI",
+    "price": 1845,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/fvsxq16407.jpg"
+    },
+    {
+    "id":24,
+    "title":"GIRLS FROCK",
+    "price": 1045,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/3pUpO12303.jpg"
+    },
+    {
+    "id":25,
+    "title":"GIRLS FROCK",
+    "price": 1245,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/B6O8P17712.jpg"
+    },
+    {
+    "id":26,
+    "title":"GIRLS SKD",
+    "price":1945 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/tPNH3EVK1crmMLdemE6DltkylBY06J4IQko2HprJ.jpg"
+    },
+    {
+    "id":27,
+    "title":"GIRLS SKD",
+    "price":2145 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/519j7dQkPzxzOfHruWJci8ouYdvWepASrFmYwahI.jpg"
+    },
+    {
+    "id":28,
+    "title":"GIRLS SKD",
+    "price":2145 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/3aZjllDMpbn20oPmxAzIz5edNyZf5ja8Z8T6AJrx.jpg"
+    },
+    {
+    "id":29,
+    "title":"WOMEN'S EXCLUSIVE KURTI",
+    "price":2145 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/BhYv914704.jpg"
+    },
+    {
+    "id":30,
+    "title":"MEN'S CASUAL PANJABI",
+    "price":2195 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/I4z8kAGjRrosdzYZDBYyD4I9aULorzmxPoFaYFAt.jpg"
+    },
+    {
+    "id":31,
+    "title":"WOMEN'S EXCLUSIVE KURTI",
+    "price": 2745,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/YmvLp14504.jpg"
+    },
+    {
+    "id":32,
+    "title":"WOMEN'S EXCLUSIVE KURTI",
+    "price":2145,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/3yn6w14304.jpg"
+    },
+    {
+    "id":33,
+    "title":"MEN'S CASUAL SHIRT",
+    "price": 1195,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/aHAyOnpQf0obXJ3SFLlLFshRIFP1VxDvwb6m6s1g.jpg"
+    },
+    {
+    "id":34,
+    "title":"MEN'S CASUAL SHIRT",
+    "price":1295 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/zhmwkZb7H3CLZAebrfnBDgYTYVDrlRPtf55qpAny.jpg"
+    },
+    {
+    "id":35,
+    "title":"MEN'S CASUAL SHIRT",
+    "price":1295 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/zkyqOLmXszsuqTibTahjHzFaBhNuEr8FndwPRDXk.jpg"
+    },
+    {
+    "id":36,
+    "title":"MEN'S NAGRA SHOES",
+    "price":2295 ,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/TWiAtkEXIHw8odunjhATvUdSOPnKuJKqqRAsStHj.jpg"
+    },
+    {
+    "id":37,
+    "title":"WOMEN'S KURTI",
+    "price": 1845,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/MczPm14904.jpg"
+    },
+    {
+    "id":38,
+    "title":"KIDS' FROCK",
+    "price": 1245,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/s2rnU12802.jpg"
+    },
+    {
+    "id":39,
+    "title":"KIDS TOPS",
+    "price":  1445,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/p5EeT12712.jpg"
+    },
+    {
+    "id":40,
+    "title":"GIRLS 2PCS SET",
+    "price": 1045,
+    "firstImage":"https://dg19fhsjeexqh.cloudfront.net/images/media/2022/05/xG40712212.jpg"
+    }]
