@@ -1,0 +1,365 @@
+* {
+  font-family: "Poppins", sans-serif;
+  
+}
+
+
+.containerr{
+  margin-bottom: 190px;
+}
+
+.signlog.col-xs-12.col-sm-12.col-md-12.col-lg-12 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+
+.signlog .button {
+  font-size: 14px;
+  margin: 0px 10px;
+  color: #000;
+  padding: 5px 68px;
+  background: transparent;
+  
+ 
+}
+
+
+
+.signlog .button{
+  border-bottom: 1px solid;
+}
+
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.googleFacebook.row.text-center {
+  margin: 45px 0;
+}
+
+
+
+#exampleInputEmail1,
+#exampleInputPassword1 {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #dee2e6;
+  border-radius: 0;
+  font-size: 13px;
+  font-weight: 500;
+  height: 40px;
+  letter-spacing: .3px;
+  padding: 15.5px 5px 4px;
+  margin: 8px 0;
+}
+
+.form-check.check {
+  margin: 25px 0;
+  transition: fade .1s;
+}
+
+.col-md-12.text-center.login-btn {
+  margin-bottom: 20px;
+  margin-top: 35px;
+}
+
+#exampleInputEmail1,
+#exampleInputPassword1,
+#exampleCheck1:focus {
+  box-shadow: none;
+}
+
+form .btn-primary {
+  border: none;
+  color: #fff;
+  border-radius: 0;
+  font-size: 13px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  background: #000;
+  z-index: 0;
+  padding-top: 8px;
+  padding-bottom: 7px;
+  width: 100%;
+}
+
+form .btn-primary:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+form .btn-primary::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background: #ff5252;
+  height: 100%;
+  width: 0%;
+  color: #fff;
+  transform-origin: 0 50%;
+  transition: 0.5s;
+}
+
+form .btn-primary:hover::before {
+  width: 100%;
+}
+
+.forget-pass a{
+border-bottom: 1px solid #adafb2;
+    color: #adafb2;
+    cursor: pointer;
+    font-size: 12px;
+    padding-bottom: 1px;
+    text-decoration: none;
+}
+
+.forget-pass a:hover{
+    color: #000;
+}
+
+
+
+/* .googleFacebook{
+  display: flex;
+} */
+
+.googleFacebook.row.text-center {
+  width: 100%;
+  margin: auto;
+}
+
+.google.col-md-6.col-sm-12 {
+  padding: 10px;
+}
+
+.facebook.col-md-6.col-sm-12 {
+  margin-top: 1px;
+  padding: 11px;
+}
+
+.googleFacebook a{
+  text-align: center;
+}
+
+.googleFacebook img{
+  height: 100%;
+  width: 100%;
+  padding: 8px;
+  
+  
+}
+
+/* register */
+
+.term p{
+  font-size: 10px;
+    color: #6d6f71;
+    line-height: 18px;
+}
+
+
+/* newsletter */
+
+
+/* newsletter */
+
+.newsletter{
+  margin-top: 50px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 50px;
+}
+
+.keepintouch{
+  margin-top: 7px;
+  font-family: "Poppins",sans-serif;
+  font-size: 12px;
+}
+
+.newsletter .form{
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid #212529;
+  margin: 30px 0;
+  padding-bottom: 8px;
+}
+
+.newsletter .btn-primary {
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-size: 14px;
+  background: none;
+  color: #000;
+  border: 2px solid #000;
+  letter-spacing: 3px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.newsletter .btn-primary:hover{
+  color: #000;
+  background: none;
+  border: 2px solid #000;
+}
+
+.contents h2{
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 40px;
+  font-weight: 500;
+  
+}
+
+.contents span{
+  text-transform: lowercase;
+  font-style: italic;
+  margin-right: 5px;
+}
+
+.newsletter .btn-primary:focus{
+  background: transparent;
+}
+
+.newsletter .form::placeholder{
+  font-family: "Poppins",sans-serif;
+
+}
+
+svg.svg-inline--fa.fa-xs {
+  font-size: 30px;
+  padding-right: 10px;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+.fonticon span{
+  font-family: "Poppins",sans-serif;
+  color: #000;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 1px;
+  align-items: center;
+  margin-left: 10px;
+  
+}
+
+.fonticon{
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  cursor: pointer;
+
+}
+
+.newsletter-icon{
+  padding: 50px;
+}
+
+
+
+.support-area{
+  padding: 50px 15px;
+  background-color: #f7f7f8;
+}
+
+
+.support-section .support-content h5{
+  letter-spacing: 2px;
+  font-size: 12px;
+  padding: 12px 0 1rem;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.support-section .support-content li{
+  list-style: none;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 5px;
+  color: #666;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+
+
+.support-content svg.svg-inline--fa.fa-xs {
+  font-size: 17px;
+  color: #666;
+  font-weight: 400;
+  margin-right: 2px;
+}
+
+.ssl-img{
+  margin-top: 2px;
+}
+
+
+/* footer */
+
+
+.copyright-section{
+  border-top: 1px solid #fafafa;
+  padding: 3px 15px; 
+  color: #000;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 12px;
+  text-transform: capitalize;
+  background-color: #f1f0f0;
+  
+}
+
+.copyright-section .row{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.copyright{
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.copyright-section p{
+  font-family: 'Poppins',sans-serif;
+  color: #000;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.copyright-section a{
+  text-decoration: none;
+}
+
+.copyright-section .right{
+  text-align: right;
+}
+
+.btnfor{
+  
+  
+}
+
+.clicky{
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}

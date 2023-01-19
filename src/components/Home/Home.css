@@ -1,0 +1,631 @@
+*{
+    font-family: "Poppins",sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+/* video{
+    width: 100%;
+    
+    
+}
+
+video source{
+    position: relative;
+} */
+
+.assets{
+    width: 100%;
+    height: 100%;
+}
+
+.assets video{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+
+
+
+/* .category-photo{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr))
+
+}
+
+img{
+    
+    height: 44vw;
+    margin: 2px 1px 0px 0px;
+    position: relative;
+}
+
+img .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    
+} */
+
+/* .pattern-flex{
+    
+        flex-basis: calc(100% / 3 - 2px);
+        flex-grow: 1;
+        flex-shrink: 0;
+        height: 43.1vw;
+        margin: 2px 1px 0 0px;
+        position: relative;
+    
+}
+
+.overlay-image{
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    height: 100%;
+} */
+
+/* .category-container{
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)) */
+/* } */
+
+
+ 
+
+/* .card-img, .card-img-bottom, .card-img-top {
+    width: 100%;
+    height: 44.5vw;
+    position: relative;
+    cursor: pointer;
+} */
+
+/* .card-group>.card {
+    flex: 1 0;
+    margin-bottom: 0;
+    margin: 2px 1.5px 0 0;
+    border: none;
+}
+
+.overlay::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: aqua;
+   
+} */
+
+
+
+/* .card-img, .card-img-bottom, .card-img-top.overlay:hover ::before{
+    clip-path: circle(100%);
+    transition: 1s;
+
+} */
+
+.first-image img{
+    width: 100%;
+    height: fit-content; 
+}
+
+.second-image img{
+    width: 100%;
+    height: fit-content; 
+}
+
+
+
+.col-md-4.col-sm-6 {
+    padding: 1.5px;
+}
+
+.cardimg {
+    border: none;
+    position: relative;
+}
+
+.cardimg h4{
+    position: absolute;
+    top: 85%;
+    left: 20%;
+    color: #fff;
+
+}
+
+.cardimg::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    background: #000;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.cardimg:hover::before{
+    opacity: .2;
+}
+
+
+/* campaign */
+
+.campaign {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.4);;
+}
+
+.campaign .inner{
+    overflow: hidden;
+}
+
+.campaign .inner img{
+    transition: all .6s ease;
+}
+
+.campaign span{
+    font-size: 12px;
+}
+
+.campaign .inner:hover img{
+    transform: scale(1.2);
+    transform: rotate(10);
+}
+
+
+.campaign .campaign-body .btn-outline-primary {
+    
+        border: 1px solid #121314;
+        border-radius: 0;
+        font-size: 16px;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        background: 0 0;
+        z-index: 0;
+        padding-top: 8px;
+        padding-bottom: 7px;
+        width: 150px;
+        color: #121314;
+    }
+
+
+.campaign .campaign-body .btn-outline-primary:hover {
+    color: #fff;
+    background: none;
+    border: 1px solid #121314;
+}
+
+
+
+.campaign .campaign-body .btn-outline-primary::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background: #121314;
+    height: 100%;
+    width: 0%;
+    color: #fff;
+    transform-origin: 0 50%;
+    transition: .5s;
+}
+
+.campaign .campaign-body .btn-outline-primary:hover::before{
+    width: 100%;
+}
+
+
+
+
+/* membership */
+
+.membership{
+    position: relative;
+}
+
+.membership img{
+    width: 100%;
+    height: 40vh;
+    margin: 10px 0;
+}
+
+.contentsss{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.contentsss h2{
+    font-size: calc(20px + (50 -20) * (100vw - 320px) / (1920 -320));
+    font-weight: 600;
+}
+
+.contentsss p{
+    font-size: calc(10px + (25 -10) * (100vw - 320px) / (1920 -320));
+    font-weight: 500;
+}
+
+.contentsss a{
+    font-size: calc(15px + (30 -10) * (100vw - 320px) / (1920 -320));
+    padding: 1px 0;
+    color: #000;
+    text-decoration: none;
+    border-bottom: 2px solid #000;
+}
+
+.contentsss a:hover{
+    color: #000;
+}
+
+
+/* .card .overlay::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: aqua;
+   
+} 
+
+.card .overlay:hover::before{
+    width: 100%;
+} */
+
+
+.slide-section{
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    
+}
+
+.slide-section .bg-slide{
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    
+
+}
+
+
+
+
+
+.slide-section .slide-img{
+    width: 310px;
+    margin: 0 5px;
+}
+
+.slide-section Swiper{
+    margin-top: 50px;
+}
+
+.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.mySwiper {
+    margin: 10px;
+    margin-top: 200px;
+}
+
+
+
+.shop{
+    background-color: #121314;
+    padding: 40px 20px;
+}
+
+.shop .row{
+    margin: 0 22px;
+}
+
+.shop .row .text{
+    text-align: center;
+}
+
+.shop .row .text h3{
+    font-family: 'setaretanfw01-regularregular';
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'setaretanfw01-regularregular';
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: .3px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 32px;
+    position: relative;
+    display: inline-block;
+}
+
+.shop .shop-address{
+    color: #fff;
+    margin: 30px 0;
+    text-align: justify;
+    
+    padding-right: 24px;
+}
+
+.shop .shop-border{
+    position: relative;
+}
+
+.shop .shop-border::after{
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 0;
+    height: 100%;
+    border: 1px dotted #62626b;
+}
+
+.shop .shop-address h3{
+    font-family: 'Poppins',sans-serif;
+    font-size: 18px;
+    letter-spacing: .3px;
+    font-weight: 600;
+}
+
+.shop .shop-address p.shopno{
+    font-size: 13px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.shop .btn-primary {
+    border: 1px solid #fff;
+    border-radius: 0;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    background: 0 0;
+    z-index: 0;
+    padding-top: 8px;
+    padding-bottom: 7px;
+    width: 150px;
+}
+
+.shop .btn-primary:hover {
+    color: #121314;
+    background: none;
+    border: 1px solid #fff;
+}
+
+
+
+.shop .btn-primary::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background: #fff;
+    height: 100%;
+    width: 0%;
+    color: #121314;
+    transform-origin: 0 50%;
+    transition: .5s;
+}
+
+.shop .btn-primary:hover::before{
+    width: 100%;
+}
+
+
+/* newsletter */
+
+.newsletter{
+    margin-top: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 50px;
+}
+
+.keepintouch{
+    margin-top: 7px;
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+}
+
+.newsletter .form{
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #212529;
+    margin: 30px 0;
+    padding-bottom: 8px;
+}
+
+.newsletter .btn-primary {
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+    background: none;
+    color: #000;
+    border: 2px solid #000;
+    letter-spacing: 3px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.newsletter .btn-primary:hover{
+    color: #000;
+    background: none;
+    border: 2px solid #000;
+}
+
+.contents h2{
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 40px;
+    font-weight: 500;
+    
+}
+
+.contents span{
+    text-transform: lowercase;
+    font-style: italic;
+    margin-right: 5px;
+}
+
+.newsletter .btn-primary:focus{
+    background: transparent;
+}
+
+.newsletter .form::placeholder{
+    font-family: "Poppins",sans-serif;
+
+}
+
+svg.svg-inline--fa.fa-xs {
+    font-size: 30px;
+    padding-right: 10px;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.fonticon span{
+    font-family: "Poppins",sans-serif;
+    color: #000;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+    align-items: center;
+    margin-left: 10px;
+    
+}
+
+.fonticon{
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    cursor: pointer;
+  
+}
+
+.newsletter-icon{
+    padding: 50px;
+}
+
+
+
+.support-area{
+    padding: 50px 15px;
+    background-color: #f7f7f8;
+}
+
+
+.support-section .support-content h5{
+    letter-spacing: 2px;
+    font-size: 12px;
+    padding: 12px 0 1rem;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.support-section .support-content li{
+    list-style: none;
+    font-size: 12px;
+    line-height: 12px;
+    padding: 5px;
+    color: #666;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+
+
+.support-content svg.svg-inline--fa.fa-xs {
+    font-size: 17px;
+    color: #666;
+    font-weight: 400;
+    margin-right: 2px;
+}
+
+.ssl-img{
+    margin-top: 2px;
+}
+
+
+/* footer */
+
+
+.copyright-section{
+    border-top: 1px solid #fafafa;
+    padding: 3px 15px; 
+    color: #000;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 12px;
+    text-transform: capitalize;
+    background-color: #f1f0f0;
+    
+}
+
+.copyright-section .row{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.copyright{
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.copyright-section p{
+    font-family: 'Poppins',sans-serif;
+    color: #000;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.copyright-section a{
+    text-decoration: none;
+}
+
+.copyright-section .right{
+    text-align: right;
+}
+
+.btnfor{
+    
+    
+}
+
+.clicky{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+
+
+ 
