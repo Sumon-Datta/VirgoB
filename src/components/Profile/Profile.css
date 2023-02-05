@@ -11,6 +11,7 @@
 }
 
 .header-section {
+  width: 100%;
   background: #121314;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -65,15 +66,19 @@ svg.svg-inline--fa.fa-xs {
   margin-top: 45px;
 }
 
+.right-side {
+  z-index: 1;
+}
+
 .right-side .common-fieldset {
   padding: 38px 57px 19px 33px !important;
   border: 1px solid #e9ebec !important;
   border-radius: 4px;
   width: 858px;
-  height: 338px;
+  min-height: 338px;
   justify-content: l;
   justify-content: left;
-  margin-left: -317px;
+  margin-left: -290px;
   margin-bottom: -15px;
   position: relative;
 }
@@ -103,8 +108,8 @@ input.form-control:focus {
   box-shadow: none;
 }
 
-label.col-form-label{
-    font-size: 14px;
+label.col-form-label {
+  font-size: 14px;
 }
 
 button {
@@ -122,7 +127,7 @@ button {
     z-index: 0;
     padding-top: 8px;
     padding-bottom: 7px;
-    width: 150px;
+    width: 150px;absolute
 }
 
 .common-fieldset .btn-primary:hover {
@@ -151,59 +156,57 @@ button {
     width: 100%;
 } */
 
-
 .btn {
-    float: right;
+  float: right;
 }
 
-a.btn.btn-secondary{
-    color: white;
-    background: #000;
-    padding: 7px 50px;
-    font-size: 14px;
-    margin-right: -11px;
-    margin-top: 5px;
-
+a.btn.btn-secondary {
+  color: white;
+  background: #000;
+  padding: 7px 50px;
+  font-size: 14px;
+  margin-right: -11px;
+  margin-top: 5px;
 }
 
-a.btn.btn-secondary:hover{
-    color: white;
-    background: #000;
+a.btn.btn-secondary:hover {
+  color: white;
+  background: #000;
 }
 
-a.btn.btn-secondary::before{
-    color: white;
-    background: #000;
+a.btn.btn-secondary::before {
+  color: white;
+  background: #000;
 }
 
-.middleBorder h3{
-    font-size: 14px;
-    background: #e9ebec;
-    color: #121314;
-    font-size: 1rem;
-    padding: 2px 20px;
-    border-radius: 4px;
+.middleBorder h3 {
+  font-size: 14px;
+  background: #e9ebec;
+  color: #121314;
+  font-size: 1rem;
+  padding: 2px 20px;
+  border-radius: 4px;
 }
 
-.middleBorder{
-    position: absolute;
-    top: 3px;
-    left: 50%;
-    text-align: center;
-    transform: translate(-50%,-50%);
+.middleBorder {
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
 }
 
-input.form-control.phone{
-    background: #e9ebec;
+input.form-control.phone {
+  background: #e9ebec;
 }
 
 .process {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.newsletter{
+.newsletter {
   margin-top: 82px;
 }

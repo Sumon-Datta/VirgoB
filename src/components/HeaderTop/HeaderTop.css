@@ -1,0 +1,51 @@
+.miniCartContainer {
+  width: 400px;
+  max-height: 450px;
+  position: absolute;
+  z-index: 999;
+  top: 35px;
+  right: 10px;
+  background: #fff;
+  padding: 15px;
+  color: #000;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+.miniCartContainer .cartItems {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 300px;
+  width: 100%;
+}
+
+.miniCartContainer .cartItems::-webkit-scrollbar {
+  display: block;
+  width: 5px;
+}
+
+.miniCartContainer .cartItems::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.miniCartContainer .cartItems::-webkit-scrollbar-thumb {
+  background-color: rgb(171, 171, 171);
+  border-right: none;
+  border-left: none;
+  border-radius: 10px;
+}
+
+.miniCartContainer .cartItems::-webkit-scrollbar-track-piece:end {
+  background: transparent;
+  margin-bottom: 10px;
+}
+
+.miniCartContainer .cartItems::-webkit-scrollbar-track-piece:start {
+  background: transparent;
+  margin-top: 10px;
+}
+
+.miniCartContainer .removeBtn {
+  font-size: 12px;
+  cursor: pointer;
+}

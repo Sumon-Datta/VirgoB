@@ -24,13 +24,12 @@ const Virgo = (props) => {
             <div className="carts" onClick={() => setShow(!show)}>
               <FontAwesomeIcon icon={faXmark} size="xs" />
             </div>
-            <div class="card">
-              
-                <img src={firstImage} class="card-img-top" />
-                <div class="card-body">
-                <h5 class="card-title">{title}</h5>
-                <p class="card-text">{price}</p>
-                <a href="#" class="btn btn-primary">
+            <div className="card">
+              <img src={firstImage} className="card-img-top" />
+              <div className="card-body">
+                <h5 className="card-title">{title}</h5>
+                <p className="card-text">{price}</p>
+                <a href="#" className="btn btn-primary">
                   Go somewhere
                 </a>
               </div>

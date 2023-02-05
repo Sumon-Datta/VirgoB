@@ -1,71 +1,65 @@
-import React, { useEffect, useState } from 'react';
+import React, { useId } from "react";
 
-const Pagina = ({ showPerPage, onPaginationChange, total }) => {
-    const [counter, setCounter] = useState(1);
-  const [numberOfButtons, setNumberOfButoons] = useState(
-    Math.ceil(total / showPerPage)
-  );
-
-  useEffect(() => {
-    const value = showPerPage * counter;
-    onPaginationChange(value - showPerPage, value);
-    setNumberOfButoons(Math.ceil(total / showPerPage))
-  }, [counter, total]);
-
-  const onButtonClick = (type) => {
-    if (type === "prev") {
-      if (counter === 1) {
-        setCounter(1);
-      } else {
-        setCounter(counter - 1);
-      }
-    } else if (type === "next") {
-      if (numberOfButtons === counter) {
-        setCounter(counter);
-      } else {
-        setCounter(counter + 1);
-      }
-    }
+const Pagina = ({ pagination, setPagination }) => {
+  const id = useId();
+  const totalBtns = Math.ceil(pagination.total / pagination.limit);
+  const handleNext = () => {
+    if (pagination.page === totalBtns) return;
+    setPagination((p) => {
+      return { ...p, page: p.page + 1 };
+    });
+  };
+  const handlePrevious = () => {
+    if (pagination.page === 1) return;
+    setPagination((p) => {
+      return { ...p, page: p.page - 1 };
+    });
+  };
+  const handleChangePage = (number) => {
+    if (pagination.page === number) return;
+    setPagination((p) => {
+      return { ...p, page: number };
+    });
   };
 
-    return (
-        <div className="d-flex justify-content-center">
-      <nav aria-label="Page navigation example">
-        <ul class="pagination">
-          <li class="page-item">
-            <a
-              class="page-link"
-              href="#"
-              onClick={() => onButtonClick("prev")}
+  return (
+    <div aria-label="Page navigation example">
+      <ul className="pagination justify-content-center">
+        <li className="page-item">
+          <button
+            onClick={handlePrevious}
+            className="page-link text-dark"
+            aria-label="Previous"
+          >
+            <span aria-hidden="true">&laquo;</span>
+          </button>
+        </li>
+        {[...new Array(totalBtns)].map((_, i) => (
+          <li key={id + i} className={`page-item `}>
+            <button
+              onClick={() => handleChangePage(i + 1)}
+              className={`page-link ${
+                pagination.page === i + 1
+                  ? " bg-dark text-light px-3"
+                  : "text-dark"
+              }`}
             >
-              Previous
-            </a>
+              {i + 1}
+            </button>
           </li>
-
-          {new Array(numberOfButtons).fill("").map((el, index) => (
-            <li class={`page-item ${index + 1 === counter ? "active" : null}`}>
-              <a
-                class="page-link"
-                href="#"
-                onClick={() => setCounter(index + 1)}
-              >
-                {index + 1}
-              </a>
-            </li>
-          ))}
-          <li class="page-item">
-            <a
-              class="page-link"
-              href="#"
-              onClick={() => onButtonClick("next")}
-            >
-              Next
-            </a>
-          </li>
-        </ul>
-      </nav>
+        ))}
+        <li className="page-item">
+          <button
+            onClick={handleNext}
+            className="page-link text-dark"
+            aria-label="Next"
+          >
+            <span aria-hidden="true">&raquo;</span>
+          </button>
+        </li>
+      </ul>
     </div>
-    );
+  );
 };
 
 export default Pagina;

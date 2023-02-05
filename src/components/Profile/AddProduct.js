@@ -1,33 +1,77 @@
-import React from "react";
+import React, { useContext, useRef, useState } from "react";
 import "./Profile.css";
 
-import { faEye } from "@fortawesome/free-regular-svg-icons";
 import {
   faCartShopping,
   faCirclePlus,
   faHeart,
   faLock,
   faPowerOff,
-  faTrashCan,
   faUserAlt,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import { AuthContext } from "../../context/AuthContext";
-import { WishlistContext } from "../../context/WishlistContext";
-import "./Profile.css";
 
-const WishList = () => {
-  const { wishlistItems, removeFromWishlist } = useContext(WishlistContext);
+const Profile = () => {
   const { user, logout } = useContext(AuthContext);
-  const navigate = useNavigate();
+  const [availableSizes, setAvailableSizes] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const sizeInputRef = useRef(null);
+
+  const handleAddProduct = async (e) => {
+    e.preventDefault();
+    if (availableSizes.length < 1) return;
+    setIsLoading(true);
+    const product = {
+      title: e.target.title.value,
+      price: e.target.price.value,
+      image: e.target.image.value,
+      availableSizes: availableSizes,
+    };
+    console.log(product);
+    console.log("sending");
+    try {
+      const res = await fetch(`http://localhost:5000/api/product`, {
+        method: "POST",
+        body: JSON.stringify(product),
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      });
+      const data = await res.json();
+      if (data.success) {
+        console.log(data);
+        toast.success("Product added successfully!");
+        e.target.reset();
+        setAvailableSizes([]);
+      } else {
+        toast.error("Something went wrong!");
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error("Something went wrong!");
+    }
+    console.log("end");
+    setIsLoading(false);
+  };
+
+  const handleAddSize = () => {
+    const value = sizeInputRef.current.value;
+    if (value === "") return;
+    if (availableSizes.includes(value)) return;
+    setAvailableSizes((p) => [...p, value]);
+    sizeInputRef.current.value = "";
+  };
 
   return (
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-12 header-section">
-          <h4>WISH LIST- MANAGE MY ACCOUNT</h4>
+          <h4>PROFILE- ADD PRODUCT</h4>
         </div>
       </div>
 
@@ -47,20 +91,20 @@ const WishList = () => {
                 </li>
                 {user?.role === "admin" && (
                   <li className="nav-item">
-                    <Link to="/add-product" className="nav-link ">
+                    <Link to="/add-product" className="nav-link text-danger">
                       <FontAwesomeIcon icon={faCirclePlus} size="xs" />
                       Add Product
                     </Link>
                   </li>
                 )}
                 <li className="nav-item">
-                  <Link to="/wishlist" className="nav-link text-danger">
+                  <Link to="/wishlist" className="nav-link">
                     <FontAwesomeIcon
                       className="icon"
                       icon={faHeart}
                       size="xs"
                     />
-                    Wishlist{" "}
+                    Wishlist
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -86,7 +130,7 @@ const WishList = () => {
                       icon={faPowerOff}
                       size="xs"
                     />
-                    Logout
+                    Logout{" "}
                   </button>
                 </li>
               </div>
@@ -96,95 +140,40 @@ const WishList = () => {
           {/* right-side */}
 
           <div className=" right-side col-md-9">
-            <form>
+            <form onSubmit={handleAddProduct}>
               <div className="common-fieldset">
                 <div className="middleBorder">
-                  <h3>
-                    {" "}
-                    <FontAwesomeIcon
-                      className="icon"
-                      icon={faHeart}
-                      size="xs"
-                    />
-                    My Wishlist
-                  </h3>
+                  <h3>Add Product</h3>
                 </div>
-                {wishlistItems.length > 0 ? (
-                  <table className="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">Product Name</th>
-                        <th scope="col">Image</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {wishlistItems.map(
-                        ({ productId: { title, image, price, _id } }) => (
-                          <tr key={_id}>
-                            <td className="align-middle">{title}</td>
-                            <td>
-                              <img width={80} src={image} alt="" />
-                            </td>
-                            <td className="align-middle">{price} ৳</td>
-                            <td className="align-middle">
-                              <div className="d-flex gap-3">
-                                <div
-                                  onClick={() => navigate(`/product/${_id}`)}
-                                  style={{ cursor: "pointer" }}
-                                >
-                                  <FontAwesomeIcon className="" icon={faEye} />
-                                </div>
-                                <div
-                                  onClick={() => removeFromWishlist(_id)}
-                                  style={{ cursor: "pointer" }}
-                                >
-                                  <FontAwesomeIcon
-                                    className="text-danger"
-                                    icon={faTrashCan}
-                                  />
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                        )
-                      )}
-                    </tbody>
-                  </table>
-                ) : (
-                  <h6 className="text-center">No items found in wishlist</h6>
-                )}
-
-                {/* <div className="row g-3 align-items-center">
+                <div className="row g-3 align-items-center">
                   <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                     <label htmlFor="" className="col-form-label">
-                      Name :<sup className="text-danger">*</sup>
+                      Title :<sup className="text-danger">*</sup>
                     </label>
                   </div>
                   <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9">
                     <input
                       type="text"
-                      name="first_name"
-                      value="Mahbubur Rahman"
+                      name="title"
                       className="form-control"
-                      placeholder="Please Enter First Name"
+                      placeholder="Product Title"
+                      required
                     />
                   </div>
                 </div>
                 <div className="row g-3 align-items-center">
                   <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                     <label htmlFor="" className="col-form-label">
-                      Phone :<sup className="text-danger">*</sup>
+                      Image :<sup className="text-danger">*</sup>
                     </label>
                   </div>
                   <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9">
                     <input
                       type="text"
-                      name="Phone number"
-                      value="01743455691"
-                      className="form-control phone"
-                      placeholder="Please Enter First Name"
+                      name="image"
+                      className="form-control "
+                      placeholder="Product Image Url"
+                      required
                     />
                   </div>
                 </div>
@@ -192,16 +181,16 @@ const WishList = () => {
                 <div className="row g-3 align-items-center">
                   <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                     <label htmlFor="" className="col-form-label">
-                      Email :<sup className="text-danger">*</sup>
+                      Price :<sup className="text-danger">*</sup>
                     </label>
                   </div>
                   <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9">
                     <input
-                      type="email"
-                      name="Email-Address"
-                      value="mahbub.mediasoft@gmail.com"
+                      type="text"
+                      name="price"
                       className="form-control"
-                      placeholder="Please Enter First Name"
+                      placeholder="Product Price"
+                      required
                     />
                   </div>
                 </div>
@@ -209,23 +198,59 @@ const WishList = () => {
                 <div className="row g-3 align-items-center">
                   <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                     <label htmlFor="" className="col-form-label">
-                      Phone No :<sup className="text-danger">*</sup>
+                      Size :<sup className="text-danger">*</sup>
                     </label>
                   </div>
                   <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-                    <input
-                      type="text"
-                      name="Mobile Number"
-                      value="01743455691"
-                      className="form-control"
-                      placeholder="Please Enter First Name"
-                    />
+                    <div className="d-flex align-items-center gap-2">
+                      <input
+                        type="text"
+                        name="availableSizes"
+                        ref={sizeInputRef}
+                        className="form-control w-25"
+                        placeholder="Add Available Sizes"
+                      />
+                      <button
+                        type="button"
+                        onClick={handleAddSize}
+                        className="px-3 py-1 bg-dark text-light"
+                      >
+                        Add Size
+                      </button>
+                    </div>
+                    <div className=" d-flex gap-2">
+                      {availableSizes.map((size, i) => (
+                        <div
+                          key={size + i}
+                          className="px-2 border d-flex gap-2"
+                        >
+                          <span>{size}</span>
+                          <span>
+                            <FontAwesomeIcon
+                              onClick={() =>
+                                setAvailableSizes((p) =>
+                                  p.filter((s) => s !== size)
+                                )
+                              }
+                              style={{ cursor: "pointer" }}
+                              className="text-danger"
+                              icon={faXmark}
+                            />
+                          </span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
                 <div className="btn">
-                  <a href="" className="btn btn-primary">Update</a>
-                </div> */}
+                  <button
+                    disabled={isLoading}
+                    className="py-2 px-3 bg-dark text-light"
+                  >
+                    Add Product
+                  </button>
+                </div>
               </div>
             </form>
           </div>
@@ -235,4 +260,4 @@ const WishList = () => {
   );
 };
 
-export default WishList;
+export default Profile;

@@ -1,8 +1,4 @@
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useEffect } from "react";
-import { useContext } from "react";
-import { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ContextApi from "../contextapi/ContextApi";
 import ProductDetail from "../productDetail/ProductDetail";
 import Virgo from "../virgo/Virgo";
@@ -31,18 +27,12 @@ const Virgofashion = () => {
   const handleToCart = (product) => {
     const newCount = [...count, product];
     setCount(newCount);
-    console.log(newCount);
   };
 
   const handleAdd = (product) => {
     const newwishlist = [...wishlist, product];
     setWishlist(newwishlist);
-    console.log(newwishlist);
   };
-
-
-  
-
 
   return (
     <div className="main">
@@ -71,7 +61,7 @@ const Virgofashion = () => {
             product={product}
             handleToCart={handleToCart}
             handleaddToCart={handleaddToCart}
-            handleAdd ={handleAdd}
+            handleAdd={handleAdd}
           ></Virgocart>
         ))}
       </div>

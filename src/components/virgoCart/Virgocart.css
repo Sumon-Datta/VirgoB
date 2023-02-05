@@ -1,4 +1,110 @@
-.products{
-    
+.product {
+  padding: 10px;
+  position: relative;
+}
+.productImg {
+  border: 1px solid lightgray;
+  position: relative;
+  cursor: pointer;
+}
+.badgeContainer {
+  position: absolute;
+  top: 20px;
+}
+.productBadge {
+  background: #000;
+  width: max-content;
+  color: white;
+  padding: 5px 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-size: 15px;
+  margin-top: 10px;
+}
+.product:hover .addToView {
+  display: flex;
+}
+.product:hover .viewDetailsBtn {
+  display: block;
+}
+.addToView {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.basketIcon {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #000;
+  color: white;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.outerBorder {
+  border: 1px dashed #000;
+  border-radius: 50%;
+}
+.productTitle {
+  margin-top: 10px;
+  font-size: 20px;
+}
+.productPrice {
+  font-size: 16px;
+}
+.heartIcon {
+  color: rgb(170, 170, 170);
+}
+.heartIcon:hover {
+  color: black;
+}
+.viewDetailsBtn {
+  display: none;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  background: #000;
+  color: white;
+  padding: 5px 15px;
+  width: 100%;
+  transition: all 0.9s ease;
 }
 
+.productSizeContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.productSize {
+  height: 45px;
+  width: 45px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.quantityContainer {
+  width: 200px;
+  display: flex;
+  border: 1px solid #000;
+  gap: 10px;
+  padding: 5px 10px;
+  justify-content: space-between;
+}
+.quantityContainer button {
+  background: none;
+}

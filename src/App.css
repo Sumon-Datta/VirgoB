@@ -1,26 +1,29 @@
-.valueupanddown{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+* {
+  box-sizing: border-box;
+}
+html {
+  width: 100%;
 }
 
-.value{
-    font-size: 100px;
-    margin: 0 75px;
+.valueupanddown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.button{
-    font-size: 60px;
-    padding: 8px 55px;
-    border-radius: 350px;
-    font-size: 18px;
-    background-color: rgb(46, 45, 45);
-    color: #fff;
-    font-weight: 600;
-    letter-spacing: .9px;
-    border: none;
-
+.value {
+  font-size: 100px;
+  margin: 0 75px;
 }
 
-
-
+.button {
+  font-size: 60px;
+  padding: 8px 55px;
+  border-radius: 350px;
+  font-size: 18px;
+  background-color: rgb(46, 45, 45);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.9px;
+  border: none;
+}
