@@ -34,7 +34,7 @@ const Profile = () => {
     console.log(product);
     console.log("sending");
     try {
-      const res = await fetch(`http://localhost:5000/api/product`, {
+      const res = await fetch(`https://virgobackend.onrender.com/api/product`, {
         method: "POST",
         body: JSON.stringify(product),
         headers: {

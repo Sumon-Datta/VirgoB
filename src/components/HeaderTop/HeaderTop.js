@@ -28,7 +28,7 @@ const HeaderTop = () => {
         className="d-md-flex justify-content-between align-items-center px-2"
       >
         <div style={{ fontSize: "14px" }} className="d-flex gap-3 ">
-          <Link className="text-white" to={"/"}>
+          <Link className="text-white" to={"/home"}>
             <FontAwesomeIcon className="me-2" icon={faHouse} />
           </Link>
           <div>

@@ -15,7 +15,7 @@ const WishlistProvider = ({ children }) => {
     const fetchWishlist = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/wishlist/${userId}`,
+          `https://virgobackend.onrender.com/api/wishlist/${userId}`,
           {
             headers: {
               authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -40,7 +40,7 @@ const WishlistProvider = ({ children }) => {
       );
     try {
       const response = await fetch(
-        `http://localhost:5000/api/wishlist/${userId}/${productId}`,
+        `https://virgobackend.onrender.com/api/wishlist/${userId}/${productId}`,
         {
           method: "POST",
           headers: {
@@ -63,12 +63,15 @@ const WishlistProvider = ({ children }) => {
 
   const removeFromWishlist = async (productId) => {
     try {
-      await fetch(`http://localhost:5000/api/wishlist/${userId}/${productId}`, {
-        method: "DELETE",
-        headers: {
-          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-        },
-      });
+      await fetch(
+        `https://virgobackend.onrender.com/api/wishlist/${userId}/${productId}`,
+        {
+          method: "DELETE",
+          headers: {
+            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          },
+        }
+      );
       setWishlistItems((prevWishlistItems) =>
         prevWishlistItems.filter((item) => item.productId._id !== productId)
       );

@@ -19,7 +19,7 @@ const ProductDetail = () => {
   }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/product/${productId}`)
+    fetch(`https://virgobackend.onrender.com/api/product/${productId}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -30,7 +30,9 @@ const ProductDetail = () => {
 
   useEffect(() => {
     const random = Math.random() * 5;
-    fetch(`http://localhost:5000/api/product/?page=${random}&limit=${3}`)
+    fetch(
+      `https://virgobackend.onrender.com/api/product/?page=${random}&limit=${3}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setSuggested(data.data.data);

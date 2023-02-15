@@ -13,6 +13,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 
 import { Badge } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [menus, setMenu] = useState([]);
@@ -42,7 +43,34 @@ const Home = () => {
 
       <div className="assets">
         <video src={videoBg} autoPlay loop muted controls></video>
-        <div className="fullmenu "></div>
+        <div className="fullmenu ">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+          <div className="link">
+          <a class="navbar-brand" href="#">VIRGO</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+          </div>
+  
+  
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <Link class="nav-link" to="/home">Home <span class="sr-only">(current)</span></Link>
+      </li>
+      <li class="nav-item">
+        <Link class="nav-link" to="/product">Shop</Link>
+      </li>
+      <li class="nav-item">
+        <Link class="nav-link" to="/profile">Profile</Link>
+      </li>
+      <li class="nav-item">
+        <Link class="nav-link " to="/login">Account</Link>
+      </li>
+    </ul>
+  </div>
+</nav>
+        </div>
       </div>
 
       {/* <div className="w-100">

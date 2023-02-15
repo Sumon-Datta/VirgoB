@@ -18,7 +18,7 @@ const Products = () => {
 
   useEffect(() => {
     fetch(
-      `http://localhost:5000/api/product/?page=${pagination.page}&limit=${pagination.limit}`
+      `https://virgobackend.onrender.com/api/product/?page=${pagination.page}&limit=${pagination.limit}`
     )
       .then((res) => res.json())
       .then((data) => {

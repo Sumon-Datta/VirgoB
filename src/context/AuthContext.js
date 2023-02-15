@@ -24,7 +24,7 @@ const AuthProvider = ({ children }) => {
       // console.log(codeResponse);
       setLoading(true);
       const response = await axios.post(
-        "http://localhost:5000/api/auth/google",
+        "https://virgobackend.onrender.com/api/auth/google",
         {
           code: codeResponse.code,
         }
@@ -50,7 +50,7 @@ const AuthProvider = ({ children }) => {
           const postUser = async () => {
             setLoading(true);
             const res = await axios.post(
-              "http://localhost:5000/api/auth/facebook",
+              "https://virgobackend.onrender.com/api/auth/facebook",
               {
                 access_token: response.authResponse.accessToken,
               }
@@ -77,7 +77,7 @@ const AuthProvider = ({ children }) => {
       const info = { name, email, password, phone };
       setLoading(true);
       const res = await axios.post(
-        `http://localhost:5000/api/auth/signup`,
+        `https://virgobackend.onrender.com/api/auth/signup`,
         info
       );
 
@@ -101,7 +101,7 @@ const AuthProvider = ({ children }) => {
     try {
       const info = { phone, password };
       const res = await axios.post(
-        `http://localhost:5000/api/auth/login`,
+        `https://virgobackend.onrender.com/api/auth/login`,
         info
       );
 
@@ -117,7 +117,7 @@ const AuthProvider = ({ children }) => {
   const updateUserInfo = async (info) => {
     try {
       const res = await axios.patch(
-        `http://localhost:5000/api/auth/updateUser/${user._id}`,
+        `https://virgobackend.onrender.com/api/auth/updateUser/${user._id}`,
         info,
         {
           headers: {
@@ -143,9 +143,12 @@ const AuthProvider = ({ children }) => {
       const getUser = async () => {
         setLoading(true);
         try {
-          const res = await axios.get(`http://localhost:5000/api/auth/user`, {
-            headers: { authorization: `Bearer ${tkn}` },
-          });
+          const res = await axios.get(
+            `https://virgobackend.onrender.com/api/auth/user`,
+            {
+              headers: { authorization: `Bearer ${tkn}` },
+            }
+          );
           setUser(res.data.data.user);
           setLoading(false);
         } catch (error) {
